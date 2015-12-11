@@ -1,0 +1,16 @@
+<% @cars.each do |car| %>
+  <tr>
+    <td><%= car.id %></td>
+    <td colspan="2"><%= car.name %></td>
+    <td colspan="2"><%= car.gosnum %></td>
+    <td colspan="2"><%= car.pts %></td>
+    <td colspan="2"><%= car.pts_date %></td>
+    <td>
+      <% if car.has_photo? %> 
+        &#10004;
+      <% end %>
+    </td>
+    <td class="box-btn"><%= link_to 'Редактировать', edit_car_path(car), class: "btn btn-primary" %></td>
+    <td class="box-btn"><%= link_to 'Удалить', car, method: :delete, data: { confirm: 'Вы уверены?' }, class: "btn btn-primary" %></td>
+  </tr>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  gosnum: MyString
+  pts: MyString
+  pts_date: 2015-12-10
+
+two:
+  name: MyString
+  gosnum: MyString
+  pts: MyString
+  pts_date: 2015-12-10

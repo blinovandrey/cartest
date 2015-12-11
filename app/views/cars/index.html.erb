@@ -1,0 +1,27 @@
+<h1>Список автомобилей</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th colspan="2">Наименование</th>
+      <th colspan="2">Гос. номер</th>
+      <th colspan="2">ПТС</th>
+      <th colspan="2">Дата ПТС</th>
+      <th>Фото</th>
+      <th colspan="2"><%= link_to 'Новый', new_car_path, class: "btn btn-primary" %></th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <td>Всего:</td>
+      <td colspan="2"><%= @cars.count %></td>
+      <td colspan="9"></td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <%= render 'cars' %>
+  </tbody>
+</table>

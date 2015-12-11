@@ -1,0 +1,54 @@
+<div class="container wide">
+<%= form_for @car, :html => { :multipart => true } do |f| %>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:
+      <ul>
+      <% @car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="field span4 offset3">
+      <%= f.label "Наименование" %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field span5 offset1">
+      <%= f.label "Гос. номер" %>
+      <%= f.text_field :gosnum %>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="field span4 offset3">
+      <%= f.label "ПТС" %>
+      <%= f.text_field :pts %>
+    </div>
+    <div class="field span5 offset1">
+      <%= f.label "Дата ПТС" %>
+      <%= f.date_select :pts_date, {:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }}, {:class => 'date-select'}  %>
+    </div>
+  </div>
+
+  <% if !@car.nil? && @car.has_photo? %>
+    <%= render 'photos' %>
+  <% end %>
+
+  <br>
+  <div class="field span10 offset2">
+    <%= file_field_tag "images[]", type: :file %><br>
+    <%= file_field_tag "images[]", type: :file %><br>
+    <%= file_field_tag "images[]", type: :file %><br>
+  </div>
+
+  <div class="actions span4 offset2">
+    <br>
+    <%= f.submit "Сохранить", class: "btn btn-primary" %>
+    <%= link_to "Назад", :back, class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>

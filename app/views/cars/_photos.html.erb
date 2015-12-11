@@ -1,0 +1,10 @@
+<br>
+<div class="container">
+ <ul class="thumbnails">
+  <% @car.photos.each do |photo| %>
+    <li class="span3">
+      <%= image_tag(photo.image.url) %>
+    </li>
+  <% end %>
+ </ul>
+</div>

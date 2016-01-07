@@ -8,7 +8,7 @@ class Car < ActiveRecord::Base
 
   private
   	def valid_date
-  	  if Date.today < pts_date 
+  	  if !pts_date.nil? && Date.today < pts_date
   	  	errors.add(:pts_date, 'must be not in future')
   	  end
   	end

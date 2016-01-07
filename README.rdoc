@@ -1,28 +1,27 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Тестовое задание
+Общее описание
+Создать приложение на Ruby on Rails состоящие из одной страницы – список
+автомобилей. У каждого автомобиля есть такие поля заполняемые пользователем:
+Наименование, Гос. номер, номер ПТС, дата выдачи ПТС и галерея фотографий этого
+автомобиля. Пользователь может создавать авто, редактировать и удалять. Фотографии
+можно загружать как при создании так и при редактировании автомобиля. Количество
+загружаемых фотографий ничем не ограничено.
+Схематичный вид списка автомобилей
+# - id
+Фото – галка ставится, если есть фотографии у автомобиля
+Новый, Редак., Удал. - кнопки
+# Наименование Гос. номер ПТС Дата ПТС
+1 Higer А123АА 116 77 ТО 123456 10.12.2015
+... ... ... ... ...
+Всего: N
+Новый
+Редак. Удал.
+Редак. Удал.
+Фото
+*Схематичный вид формы автомобилей
+Наименование
+Гос. номер
+Номер ПТС
+Дата ПТС
+Сохранить Назад
+Фото 1 Фото 2 Фото 3
